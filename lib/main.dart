@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -5,8 +6,13 @@ import 'package:the_silent_void/app/modules/intro/intro1.dart';
 import 'package:the_silent_void/app/modules/intro/intro2.dart';
 import 'package:the_silent_void/app/modules/intro/intro3.dart';
 import 'package:the_silent_void/app/modules/signin/signin_page.dart';
+import 'package:the_silent_void/firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -98,7 +104,7 @@ class _MainState extends State<Main> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return const SigninPage();
+                                return SigninPage();
                               },
                             ),
                           );
@@ -151,8 +157,10 @@ class _MainState extends State<Main> {
                           child: Text(
                             'NEXT',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                              fontFamily: 'Exo2',
+                            ),
                           ),
                         )),
 

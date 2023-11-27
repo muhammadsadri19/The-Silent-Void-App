@@ -23,7 +23,11 @@ class Intro2 extends StatelessWidget {
             child: Text(
               "Welcome to The Silent Void",
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontFamily: 'Exo2',
+              ),
             ),
           ),
           Padding(
@@ -31,7 +35,11 @@ class Intro2 extends StatelessWidget {
             child: Text(
               "a place where silence meets excitement, and new gamers are welcomed with open arms! We are excited to welcome you to this community, where passion for gaming comes together in a space filled with intimacy and engagement. Together, let's explore and celebrate the beautiful world of gaming within The Silent Void.",
               textAlign: TextAlign.justify,
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontFamily: 'Exo2',
+              ),
             ),
           ),
         ],

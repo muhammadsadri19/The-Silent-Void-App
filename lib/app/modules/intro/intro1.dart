@@ -26,6 +26,7 @@ class Intro1 extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
                 border: Border.all(color: Color(0xffFFC700), width: 1),
+                color: Color.fromARGB(255, 26, 28, 44),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                 boxShadow: [
                   BoxShadow(
@@ -36,8 +37,10 @@ class Intro1 extends StatelessWidget {
                 ]),
             child: Text(
               'WELCOME TO THE SILENT VOID ',
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontFamily: 'Exo2'),
             ),
           )
         ],

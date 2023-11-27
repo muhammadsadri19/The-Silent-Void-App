@@ -16,18 +16,16 @@ class Intro3 extends StatelessWidget {
             Text(
               'Thank You for Your Support!',
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Exo2'),
             ),
             SizedBox(height: 10),
             Text(
               'Stay Connected with Us on Social Media',
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
+                  color: Colors.white, fontSize: 16, fontFamily: 'Exo2'),
             ),
             SizedBox(height: 20),
             Row(
@@ -67,9 +65,7 @@ class Intro3 extends StatelessWidget {
             Text(
               'Join Our Community!',
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
+                  color: Colors.white, fontSize: 16, fontFamily: 'Exo2'),
             ),
             SizedBox(height: 10),
             ElevatedButton(
@@ -81,7 +77,10 @@ class Intro3 extends StatelessWidget {
                 primary: Colors.green, // Button color
                 onPrimary: Colors.white, // Text color
               ),
-              child: Text('Join Now'),
+              child: Text(
+                'Join Now',
+                style: TextStyle(fontFamily: 'Exo2'),
+              ),
             ),
             SizedBox(height: 30),
           ],
