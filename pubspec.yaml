@@ -40,6 +40,7 @@ dependencies:
   flutter_animate: ^4.2.0+1
   material_design_icons_flutter: ^7.0.7296
   firebase_core: ^2.23.0
+  firebase_auth: ^4.14.1
 
 
 dev_dependencies:
@@ -70,6 +71,9 @@ flutter:
     - assets/images/apple.png
     - assets/images/google.png
     - assets/images/shield.png
+    - assets/images/easports.png
+    - assets/images/gta.png
+    - assets/images/xbox.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
