@@ -41,6 +41,7 @@ dependencies:
   material_design_icons_flutter: ^7.0.7296
   firebase_core: ^2.23.0
   firebase_auth: ^4.14.1
+  google_nav_bar: ^5.0.6
 
 
 dev_dependencies:
@@ -90,6 +91,9 @@ flutter:
     - family: Exo2
       fonts:
         - asset: fonts/Exo2-VariableFont_wght.ttf
+    - family: ShareTech
+      fonts:
+        - asset: fonts/ShareTech-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

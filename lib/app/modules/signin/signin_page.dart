@@ -1,11 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:the_silent_void/app/modules/home/home_page.dart';
+import 'package:the_silent_void/app/components/nav_bar.dart';
+
 import 'package:the_silent_void/app/modules/signin/widget/my_button.dart';
 
 import 'package:the_silent_void/app/modules/signin/widget/square_tile.dart';
 import 'package:the_silent_void/app/modules/signup/signup_page.dart';
+import 'package:the_silent_void/app/modules/uu%20member/uumember_page.dart';
 
 class SigninPage extends StatefulWidget {
   SigninPage({Key? key}) : super(key: key);
@@ -32,7 +34,7 @@ class _SigninPageState extends State<SigninPage> {
       );
       print('User Logged In : ${userCredential.user!.email}');
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+          context, MaterialPageRoute(builder: (context) => NavBar()));
     } catch (e) {
       print('Error During Logged In : $e');
     }
