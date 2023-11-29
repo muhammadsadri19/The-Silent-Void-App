@@ -44,6 +44,9 @@ dependencies:
   google_nav_bar: ^5.0.6
   cloud_firestore: ^4.13.3
   get: ^4.6.6
+  lottie: ^2.7.0
+  carousel_slider: ^4.2.1
+  url_launcher: ^6.2.1
 
 
 dev_dependencies:
@@ -71,12 +74,23 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/logo.png
+    - assets/images/bgIntro/bg-intro1.jpg
+    - assets/images/bgIntro/bg-intro2.jpg
+    - assets/images/bgIntro/bg-intro3.jpg
     - assets/images/apple.png
     - assets/images/google.png
     - assets/images/shield.png
     - assets/images/easports.png
     - assets/images/gta.png
     - assets/images/xbox.png
+    - assets/images/profile.jpg
+    - assets/images/github.png
+    - assets/images/logoGame/ff.png
+    - assets/images/logoGame/gta.png
+    - assets/images/logoGame/mc.png
+    - assets/images/logoGame/ml.png
+    - assets/images/logoGame/pubg.png
+    - assets/images/logoGame/valorant.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

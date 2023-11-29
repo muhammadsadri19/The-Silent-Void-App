@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
-class Intro2 extends StatelessWidget {
+class Intro2 extends StatefulWidget {
   const Intro2({Key? key}) : super(key: key);
 
   @override
+  _Intro2State createState() => _Intro2State();
+}
+
+class _Intro2State extends State<Intro2> {
+  @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff353545),
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/bgIntro/bg-intro2.jpg'),
+              fit: BoxFit.cover)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
