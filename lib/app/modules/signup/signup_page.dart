@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:the_silent_void/app/modules/signin/signin_page.dart';
 import 'package:the_silent_void/app/modules/signup/widget/my_button.dart';
 import 'package:the_silent_void/app/modules/signup/widget/square_tile.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SignupPage extends StatefulWidget {
   SignupPage({Key? key}) : super(key: key);
@@ -15,9 +17,11 @@ class _SignupPageState extends State<SignupPage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
+  final _usernameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  String _username = '';
   String _email = '';
   String _password = '';
 
@@ -29,10 +33,23 @@ class _SignupPageState extends State<SignupPage> {
         email: _email,
         password: _password,
       );
-      print('User Registered: ${userCredential.user!.email}');
-      Navigator.pop(context); // Tutup dialog setelah pendaftaran berhasil
+
+      // Tambahkan data pengguna ke Firestore
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(userCredential.user!.uid)
+          .set({
+        'username': _username,
+        'email': _email,
+        'password': _password,
+
+        // Tambahkan data pengguna lainnya sesuai kebutuhan
+      });
+
+      print('User Terdaftar: ${userCredential.user!.email}');
+      Navigator.pop(context);
     } catch (e) {
-      print('Error During Registration: $e');
+      print('Error Selama Pendaftaran: $e');
     }
   }
 
@@ -92,6 +109,43 @@ class _SignupPageState extends State<SignupPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        TextFormField(
+                          controller: _usernameController,
+                          keyboardType: TextInputType.name,
+                          style: TextStyle(
+                              color: Colors
+                                  .white), // Warna teks di dalam TextField
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors
+                                .grey[800], // Warna latar belakang TextField
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            labelText: 'Username',
+                            labelStyle:
+                                TextStyle(color: Colors.white), // Warna label
+                            hintText: 'Enter your username',
+                            hintStyle: TextStyle(
+                                color: Colors.white70), // Warna teks hint
+                            prefixIcon: Icon(Icons.email,
+                                color: Colors.white), // Warna ikon
+                          ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please Enter Your Username';
+                            }
+                            return null;
+                          },
+                          onChanged: (value) {
+                            setState(() {
+                              _username = value;
+                            });
+                          },
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
                         TextFormField(
                           controller: _emailController,
                           keyboardType: TextInputType.emailAddress,

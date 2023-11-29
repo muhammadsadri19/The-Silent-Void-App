@@ -17,6 +17,8 @@ class SigninPage extends StatefulWidget {
 }
 
 class _SigninPageState extends State<SigninPage> {
+  bool _isLoading = false;
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -27,6 +29,9 @@ class _SigninPageState extends State<SigninPage> {
   String _password = '';
 
   void _handleSignIn() async {
+    setState(() {
+      _isLoading = true;
+    });
     try {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
         email: _email,
@@ -37,6 +42,10 @@ class _SigninPageState extends State<SigninPage> {
           context, MaterialPageRoute(builder: (context) => NavBar()));
     } catch (e) {
       print('Error During Logged In : $e');
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 
@@ -206,6 +215,7 @@ class _SigninPageState extends State<SigninPage> {
                         _handleSignIn();
                       }
                     },
+                    isLoading: _isLoading,
                   ),
 
                   const SizedBox(height: 50),
