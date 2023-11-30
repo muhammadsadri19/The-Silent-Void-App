@@ -103,8 +103,6 @@ class _Intro3State extends State<Intro3> {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.75,
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
@@ -190,13 +188,5 @@ class _Intro3State extends State<Intro3> {
         ],
       ),
     );
-  }
-
-  void launchUrl(Uri url) async {
-    if (await canLaunch(url.toString())) {
-      await launch(url.toString());
-    } else {
-      throw 'Could not launch $url';
-    }
   }
 }
