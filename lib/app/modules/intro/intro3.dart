@@ -66,40 +66,13 @@ class _Intro3State extends State<Intro3> {
 
     return Container(
       color: Color(0xff353545),
-      child: Stack(
+      child: Column(
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.7,
+            margin: EdgeInsets.only(top: 100),
             child: Lottie.network(
-                'https://lottie.host/b5cbfe1a-2908-4642-80dc-ae1611849455/kzVKoy0EaV.json',
-                width: 100,
-                height: 100),
-          ),
-          Container(
-            // color: Colors.green,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.2,
-            child: Padding(
-              padding: const EdgeInsets.only(right: 3, left: 3),
-              child: Container(
-                height: 50,
-                child: CarouselSlider(
-                  items: logoGames,
-                  options: CarouselOptions(
-                      height: 50,
-                      enlargeCenterPage: true,
-                      viewportFraction: 0.2,
-                      aspectRatio: 2.0,
-                      initialPage: 0,
-                      enableInfiniteScroll: true,
-                      autoPlay: true,
-                      autoPlayInterval: const Duration(seconds: 3),
-                      autoPlayAnimationDuration:
-                          const Duration(milliseconds: 800),
-                      autoPlayCurve: Curves.ease),
-                ),
-              ),
+              'https://lottie.host/b5cbfe1a-2908-4642-80dc-ae1611849455/kzVKoy0EaV.json',
+              height: 300,
             ),
           ),
           Container(
