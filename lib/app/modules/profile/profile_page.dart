@@ -60,14 +60,6 @@ class _ProfilePageState extends State<ProfilePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color(0xff353545),
@@ -129,11 +121,9 @@ class _ProfilePageState extends State<ProfilePage> {
                       children: [
                         Text(
                           'Sadri',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                         Text(
                           'sadri@gmail.com',
