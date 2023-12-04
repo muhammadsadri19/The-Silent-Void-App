@@ -15,20 +15,6 @@ class _Intro1State extends State<Intro1> {
           image: DecorationImage(
               image: AssetImage('assets/images/bgIntro/bg-intro1.jpg'),
               fit: BoxFit.cover)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'assets/images/logo.png',
-            height: 150,
-            width: 150,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          
-        ],
-      ),
     );
   }
 }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:sticky_headers/sticky_headers.dart';
-
+import 'package:the_silent_void/app/utils/custom_color.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -62,27 +62,17 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xff353545),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: AppBar(
-          backgroundColor: Color(0xff353545),
-          automaticallyImplyLeading: false,
-          actions: [],
-          flexibleSpace: FlexibleSpaceBar(
-            title: Text(
-              'Profile',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Readex Pro',
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-            ),
-            centerTitle: true,
-            expandedTitleScale: 1.0,
-          ),
-          elevation: 4,
+      backgroundColor: ColorUtils.background.color,
+      appBar: AppBar(
+        backgroundColor: ColorUtils.background.color,
+        automaticallyImplyLeading: false,
+        title: Text(
+          'Profile',
+          style: TextStyle(color: Colors.white),
         ),
+        actions: [],
+        centerTitle: true,
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -127,13 +117,19 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                         Text(
                           'sadri@gmail.com',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                       ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(150, 0, 0, 0),
+                    child: Icon(
+                      Icons.admin_panel_settings_rounded,
+                      color: Colors.white,
+                      size: 24,
                     ),
                   ),
                 ],
@@ -152,10 +148,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
                     'Info',
-                    style: FlutterFlowTheme.of(context).titleLarge.override(
-                        fontFamily: 'Readex Pro',
-                        fontSize: 18,
-                        color: Colors.white),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
               ),
@@ -179,12 +172,9 @@ class _ProfilePageState extends State<ProfilePage> {
                             child: Text(
                               'Discord Role',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                  ),
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ),
@@ -209,21 +199,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                 children: [
                                   Text(
                                     'ID Member',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Color(0xffB6BBC4),
-                                        ),
+                                    style: TextStyle(
+                                      color: Color(0xffB6BBC4),
+                                    ),
                                   ),
                                   Text(
                                     '1234909878',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.black,
-                                        ),
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -251,21 +235,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                 children: [
                                   Text(
                                     'User Name',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Color(0xffB6BBC4),
-                                        ),
+                                    style: TextStyle(
+                                      color: Color(0xffB6BBC4),
+                                    ),
                                   ),
                                   Text(
                                     'Muuri',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.black,
-                                        ),
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -293,21 +271,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                 children: [
                                   Text(
                                     'Divisi',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Color(0xffB6BBC4),
-                                        ),
+                                    style: TextStyle(
+                                      color: Color(0xffB6BBC4),
+                                    ),
                                   ),
                                   Text(
                                     'Moderator',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.black,
-                                        ),
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -336,12 +308,9 @@ class _ProfilePageState extends State<ProfilePage> {
                               child: Text(
                                 'Game Role',
                                 textAlign: TextAlign.justify,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: Colors.black,
-                                    ),
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -367,21 +336,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: [
                                     Text(
                                       'Games',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Color(0xffB6BBC4),
-                                          ),
+                                      style: TextStyle(
+                                        color: Color(0xffB6BBC4),
+                                      ),
                                     ),
                                     Text(
                                       'Valorant',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.black,
-                                          ),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -410,21 +373,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: [
                                     Text(
                                       'Position',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Color(0xffB6BBC4),
-                                          ),
+                                      style: TextStyle(
+                                        color: Color(0xffB6BBC4),
+                                      ),
                                     ),
                                     Text(
                                       'Duelist',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.black,
-                                          ),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -453,21 +410,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: [
                                     Text(
                                       'Agent',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Color(0xffB6BBC4),
-                                          ),
+                                      style: TextStyle(
+                                        color: Color(0xffB6BBC4),
+                                      ),
                                     ),
                                     Text(
                                       'Jett',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.black,
-                                          ),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -497,12 +448,9 @@ class _ProfilePageState extends State<ProfilePage> {
                               child: Text(
                                 'Bio',
                                 textAlign: TextAlign.justify,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: Colors.black,
-                                    ),
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -528,21 +476,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: [
                                     Text(
                                       'Nama Lengkap',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Color(0xffB6BBC4),
-                                          ),
+                                      style: TextStyle(
+                                        color: Color(0xffB6BBC4),
+                                      ),
                                     ),
                                     Text(
                                       'Muhammad Sadri',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.black,
-                                          ),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -571,21 +513,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: [
                                     Text(
                                       'Email',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Color(0xffB6BBC4),
-                                          ),
+                                      style: TextStyle(
+                                        color: Color(0xffB6BBC4),
+                                      ),
                                     ),
                                     Text(
                                       'sadri@gmail.com',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.black,
-                                          ),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -614,21 +550,15 @@ class _ProfilePageState extends State<ProfilePage> {
                                   children: [
                                     Text(
                                       'Phone',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Color(0xffB6BBC4),
-                                          ),
+                                      style: TextStyle(
+                                        color: Color(0xffB6BBC4),
+                                      ),
                                     ),
                                     Text(
                                       '081212882344',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.black,
-                                          ),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -650,10 +580,9 @@ class _ProfilePageState extends State<ProfilePage> {
                       alignment: AlignmentDirectional(0.00, 0.00),
                       child: Text(
                         'Log Out',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: FlutterFlowTheme.of(context).error,
-                            ),
+                        style: TextStyle(
+                          color: FlutterFlowTheme.of(context).error,
+                        ),
                       ),
                     ),
                   ),

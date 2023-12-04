@@ -48,6 +48,7 @@ dependencies:
   carousel_slider: ^4.2.1
   # url_launcher: ^6.2.1
   flutterflow_ui: ^0.2.0+1
+ 
 
   auto_size_text: 3.0.0
   flutter_animate: 4.1.1+1
@@ -70,6 +71,8 @@ dependencies:
   url_launcher_android: 6.0.27
   url_launcher_ios: 6.1.4
   url_launcher_platform_interface: 2.1.2
+
+  dropdown_button2: 2.3.9
 
 
 dev_dependencies:
@@ -115,6 +118,10 @@ flutter:
     - assets/images/logoGame/ml.png
     - assets/images/logoGame/pubg.png
     - assets/images/logoGame/valorant.png
+    - assets/images/iconRole/crown.png
+    - assets/images/iconRole/crown2.png
+    - assets/images/iconRole/id.png
+    - assets/images/iconRole/management.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

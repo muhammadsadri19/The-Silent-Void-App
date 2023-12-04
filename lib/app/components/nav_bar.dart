@@ -15,7 +15,7 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    UumemberPage(),
+    UUMemberWidget(),
     IdcardPage(),
     ProfilePage(),
     BugPage()
@@ -27,7 +27,7 @@ class _NavBarState extends State<NavBar> {
       backgroundColor: Color(0xff353545),
       body: _pages[_currentIndex], // Display the current page
       bottomNavigationBar: GNav(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF161A30),
         color: Colors.white,
         activeColor: Colors.orange,
         gap: 8,
